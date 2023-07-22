@@ -188,6 +188,9 @@ body {
   align-self: center;
 }
 
+.whatsapp {
+  color: #128c7e;
+}
 .nav-title {
   grid-area: title;
   text-align: left;
@@ -489,4 +492,37 @@ textarea {
   .contact-form {
     width: 60%;
   }
+}
+
+/* Whatsapp corner button */
+
+.whatsapp-btn-container {
+  position: fixed;
+  right: 15px;
+  opacity: 0;
+  bottom: -50px;
+  padding: 0.5rem;
+  animation: fade-up 1000ms forwards;
+  animation-delay: 1000ms;
+  background-color: white;
+  border-radius: 50%;
+  /* border: 0.1em solid gray; */
+}
+
+@keyframes fade-up {
+  100% {
+    bottom: 24px;
+    opacity: 1;
+  }
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+  font-size: 48px;
+  color: #25d366;
+  display: inline-block;
+  transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+  transform: scale(1.2);
 }

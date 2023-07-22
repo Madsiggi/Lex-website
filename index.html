@@ -27,11 +27,11 @@
     <title>My Learning Journal</title>
   </head>
   <header class="nav-bar">
-    <i class="fa-solid fa-book fa-xl logo"></i>
+    <i class="fa-solid fa-gavel fa-xl logo"></i>
     <h5 class="nav-title">Estudio Jurídico</h5>
     <nav class="nav-links">
-      <a href="#" class="home-link">Home</a>
-      <a href="#" class="about-me-link">Contacto</a>
+      <i class="fa-brands fa-whatsapp fa-xl logo whatsapp"></i>
+      <a href="#formulario" class="about-me-link">Contacto</a>
     </nav>
   </header>
   <body>
@@ -40,9 +40,8 @@
         <div class="hero-content">
           <h1 class="hero-title">
             Servicios y asesorías jurídicas accesibles para personas y empresas
-            de las regiones de Biobío y Ñuble.
           </h1>
-          <p class="hero-text">Atención 100% online.</p>
+          <!-- <p class="hero-text">Atención 100% online.</p> -->
         </div>
         <img src="./images/hero.jpg" class="hero-img" />
       </section>
@@ -95,6 +94,23 @@
       </article>
       <article class="post-card">
         <img
+          src="https://source.unsplash.com/random/500×500/?gaming"
+          class="post-img"
+        />
+        <h2 class="post-title">Área de familia</h2>
+        <div class="post-text">
+          <ul>
+            <li>Divorcios y Compensación Económica</li>
+            <li>Pensiones de Alimentos</li>
+            <li>Relación Directa y Regular (Visitas)</li>
+            <li>Investigación de Paternidad</li>
+            <li>Medidas de Protección</li>
+            <li>Violencia Intrafamiliar</li>
+          </ul>
+        </div>
+      </article>
+      <article class="post-card">
+        <img
           src="https://source.unsplash.com/random/500×500/?courthouse"
           class="post-img"
         />
@@ -131,18 +147,15 @@
       </article>
       <article class="post-card">
         <img
-          src="https://source.unsplash.com/random/500×500/?gaming"
+          src="https://source.unsplash.com/random/500×500/?it"
           class="post-img"
         />
-        <h2 class="post-title">Área de familia</h2>
+        <h2 class="post-title">Servicios de Contabilidad</h2>
         <div class="post-text">
           <ul>
-            <li>Divorcios y Compensación Económica</li>
-            <li>Pensiones de Alimentos</li>
-            <li>Relación Directa y Regular (Visitas)</li>
-            <li>Investigación de Paternidad</li>
-            <li>Medidas de Protección</li>
-            <li>Violencia Intrafamiliar</li>
+            <li>Asesoría para personas naturales</li>
+            <li>Asesoría para PYMEs</li>
+            <li>Asesorías para profesionales</li>
           </ul>
         </div>
       </article>
@@ -227,8 +240,11 @@
         </div>
       </article>
     </div>
-    <div class="contactanos">
+    <div class="contactanos" id="formulario">
       <h2 class="contact-title">Contáctanos</h2>
+      <h3 class="contact-title">
+        Déjanos tu mensaje y te responderemos a la brevedad
+      </h3>
       <form
         action="/submit"
         method="post"
@@ -244,8 +260,8 @@
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" />
 
-        <label for="rut">RUT:</label>
-        <input type="text" id="rut" name="rut" />
+        <!-- <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" /> -->
 
         <label for="mensaje">Mensaje:</label>
         <textarea
@@ -258,7 +274,11 @@
 
         <input type="submit" value="Enviar" class="submit-btn" />
       </form>
-
+      <div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/91999999999"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
       <script>
         function validateForm() {
           // Regular expressions for validation
