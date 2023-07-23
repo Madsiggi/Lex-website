@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <title>Estudio Jurídico - Contacto</title>
+  </head>
+  <header class="nav-bar">
+    <i class="fa-solid fa-gavel fa-xl logo"></i>
+    <h5 class="nav-title"><a href="../index.html">Estudio Jurídico</a></h5>
+    <nav class="nav-links">
+      <i class="fa-brands fa-whatsapp fa-xl logo whatsapp"></i>
+      <a href="#formulario" class="about-me-link">Contacto</a>
+    </nav>
+  </header>
+  <body>
+    <a class="hero-overlay" href="#">
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Responderemos a todas tus inquietudes legales y te daremos la mejor
+            atención. Escríbenos.
+          </h1>
+          <!-- <p class="hero-text">Atención 100% online.</p> -->
+        </div>
+        <img src="../images/hero.jpg" class="hero-img" />
+      </section>
+    </a>
+
+    <div class="contactanos" id="formulario">
+      <h2 class="contact-title"></h2>
+      <h3 class="contact-title">
+        Déjanos tu mensaje y te responderemos a la brevedad
+      </h3>
+      <form
+        action="/submit"
+        method="post"
+        onsubmit="return validateForm()"
+        class="contact-form"
+      >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" />
+
+        <!-- <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" /> -->
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+
+        <input type="submit" value="Enviar" class="submit-btn" />
+      </form>
+      <div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/91999999999"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+
+      <!-- <script>
+        function validateForm() {
+          // Regular expressions for validation
+          var telefonoRegex = /^[0-9\s-]*$/;
+          var rutRegex = /^[0-9]+[-|‐]{1}[0-9kK]{1}$/;
+
+          var telefonoInput = document.getElementById("telefono");
+          var rutInput = document.getElementById("rut");
+
+          // Validate telefono field
+          if (
+            telefonoInput.value.trim() !== "" &&
+            !telefonoRegex.test(telefonoInput.value)
+          ) {
+            alert(
+              "Por favor, ingresa un número de teléfono válido (solo dígitos, guiones o espacios)."
+            );
+            telefonoInput.focus();
+            return false;
+          }
+
+          // Validate RUT field
+          if (rutInput.value.trim() !== "" && !rutRegex.test(rutInput.value)) {
+            alert("Por favor, ingresa un RUT válido en el formato 12345678-9.");
+            rutInput.focus();
+            return false;
+          }
+
+          return true; // Form will be submitted if everything is valid
+        }
+      </script> -->
+    </div>
+  </body>
+  <footer>
+    <h6 class="footer-title">Estudios Jurídicos</h6>
+    <h6 class="footer-copy">Copyright &copy;2022</h6>
+  </footer>
+</html>
